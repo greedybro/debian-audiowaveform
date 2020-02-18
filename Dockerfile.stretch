@@ -1,0 +1,10 @@
+FROM debian:stretch
+
+WORKDIR /srv
+ENV DEBFULLNAME="Maintainer_name" \
+	DEBEMAIL="Maintainer_email"
+
+# Packages
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
+    build-essential sudo cmake curl bsdtar ca-certificates devscripts equivs

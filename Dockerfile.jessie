@@ -1,0 +1,12 @@
+FROM debian:jessie
+
+WORKDIR /srv
+ENV DEBFULLNAME="Maintainer_name" \
+	DEBEMAIL="Maintainer_email"
+
+# Packages
+RUN printf "deb http://archive.debian.org/debian jessie-backports main contrib non-free\ndeb-src http://archive.debian.org/debian jessie-backports main contrib non-free" > /etc/apt/sources.list.d/backports.list && \
+	printf "Acquire::Check-Valid-Until "false";" > /etc/apt/apt.conf.d/archive && \
+	apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade && \
+    DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
+    build-essential sudo cmake curl bsdtar ca-certificates devscripts equivs
