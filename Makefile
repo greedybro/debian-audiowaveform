@@ -5,11 +5,11 @@
 # Variables #
 #############
 
-PACKAGE               		   = audiowaveform
-PACKAGE_VERSION       		   = 1.4.1
-PACKAGE_REVISION               = 1
-PACKAGE_REVISION_DISTRIBUTION  = 1
-PACKAGE_SOURCE        		   = https://github.com/bbc/audiowaveform/archive/$(PACKAGE_VERSION).tar.gz
+PACKAGE = audiowaveform
+PACKAGE_VERSION = 1.4.2
+PACKAGE_REVISION = 1
+PACKAGE_REVISION_DISTRIBUTION = 1
+PACKAGE_SOURCE = https://github.com/bbc/audiowaveform/archive/$(PACKAGE_VERSION).tar.gz
 
 ##############
 # Docker_run #
