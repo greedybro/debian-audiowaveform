@@ -15,10 +15,10 @@ Provides debian package building tools for audiowaveform :
 - Execute `make package.%` (Replace `%` with wanted release distribution)
 
 ```
-	PACKAGE_VERSION       		   = 1.4.1
-	PACKAGE_REVISION               = 1
-	PACKAGE_REVISION_DISTRIBUTION  = 1
-	PACKAGE_SOURCE        		   = https://github.com/bbc/audiowaveform/archive/$(PACKAGE_VERSION).tar.gz
+	PACKAGE_VERSION = 1.4.1
+	PACKAGE_REVISION = 1
+	PACKAGE_REVISION_DISTRIBUTION = 1
+	PACKAGE_SOURCE = https://github.com/bbc/audiowaveform/archive/$(PACKAGE_VERSION).tar.gz
 ```
 ```shell:
 	make package.buster

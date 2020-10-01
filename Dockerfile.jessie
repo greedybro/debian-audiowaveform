@@ -9,4 +9,11 @@ RUN printf "deb http://archive.debian.org/debian jessie-backports main contrib n
 	printf "Acquire::Check-Valid-Until "false";" > /etc/apt/apt.conf.d/archive && \
 	apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y dist-upgrade && \
     DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
-    build-essential sudo cmake curl bsdtar ca-certificates devscripts equivs
+    build-essential \
+    sudo \
+    cmake \
+    curl \
+    bsdtar \
+    ca-certificates \
+    devscripts \
+    equivs
